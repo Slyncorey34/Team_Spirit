@@ -1,5 +1,4 @@
-<h2><%= @Post.title %></h2>
-  <p><%= @Post.date %></p>
-  <p><%= @Post.contents %></p>
-<p>
-<h1>Show A Single Post</h1>
+<% post = Post.find(1) %>
+<%= post.body %>
+<p> <%= link_to post.user.username %>
+</p>

@@ -1,6 +1,4 @@
 class PostsController < ApplicationController
-	belongs_to :user
-	has_many :comments
 end
 
 
@@ -21,4 +19,4 @@ end
 # private
 # def comment_params
 # 	params.require(:comment).permit(:content)
-end
+# end

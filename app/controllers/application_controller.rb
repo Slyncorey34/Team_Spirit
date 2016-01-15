@@ -6,20 +6,20 @@ class ApplicationController < ActionController::Base
       @user = User.find(session[:id]) if @user.nil? && session[:id]
     # redirect_to(new_user_path) unless current_user
     end
-
-    def login_required
-      return true if @user
-      access_denied
-      return false
-    end
-  end
-
-
-    def access_denied
-      session[:return_to] = request.request_url
-      flash[:error] = 'Ooops! lets login first.'
-      redirect_to :conroller => 'user', :action => 'login'
-    end
+  end 
+  #   def login_required
+  #     return true if @user
+  #     access_denied
+  #     return false
+  #   end
+  # end
+  #
+  #
+  #   def access_denied
+  #     session[:return_to] = request.request_url
+  #     flash[:error] = 'Ooops! lets login first.'
+  #     redirect_to :conroller => 'user', :action => 'login'
+  #   end
 
 
 
