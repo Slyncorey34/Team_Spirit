@@ -1,30 +1,31 @@
-<h1>Welcome, We are TeamSpirit!</h1>
+<div class="user-nav">
+	
+	<h2>Microblog</h2>
 
-<h2>Log In</h2>
-<br>
-<%=form_tag login_path do %>
-<%=label_tag(:username)%>
-<%=text_field_tag(:username)%>
-<%=label_tag(:password)%>
-<%=password_field_tag(:password)%>
-<%=submit_tag "Log In"%>
-<%end%>
+</div>
 
-<!-- Or, Sign Up -->
-<!-- SignUp Form Here -->
-<%= form_for @user do |f| %>
-<%= f.label :username %>
-<%= f.text_field :username %>
-<%= f.label :email%>
-<%= f.text_field :email%>
-<%= f.label :password%>
-<%= f.password_field :password%>
-<%=f.submit :create %>
-<% end %>
-<!-- This page would also hold any login error messages from validation failures:
-<%# if @user.errors.full_messages.any?%>
-<ul>
-<%# @user.errors.full_messages.each do |error| %> List each error
-<li><%#=error_message%></li><br>/>
-<#% end %>
--->
+
+<!-- <ul>
+	<li>about</li>
+	<li>contact</li>
+	<li>faq</li>
+</ul> -->
+<div id="form-1">
+		<%=form_tag login_path do %>
+		<%=label_tag(:username)%>
+		<%=text_field_tag(:username)%>
+		<br>
+		<br>
+		<%=label_tag(:password)%>
+		<%=password_field_tag(:password)%>
+		<br>
+		<br>
+		<%=submit_tag "Log In"%>
+		<%end%>
+
+</div>
+
+	
+	
+
+

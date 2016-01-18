@@ -1,13 +1,25 @@
 <!-- Page to show the logged-in @user -->
-<h5>Log Out</h5>
-<h2>Welcome <%=@user.username%></h2>
+<div class="user-nav">
+	<div id="user-Alias">
+		<h4>
+			Hi, <%=@user.username%>
+		</h4>
+	</div>
+	<div id="logo">
+		<h3>Microblog</h3>
+	</div>
+</div>
+<br>
+<h3><%= link_to "See your Feed", posts_path%></h3>
+
+
 
 <br>
+<%= link_to "Create a Post", new_post_path(@post)%>
+
 <%= link_to "Edit Your Account", edit_user_path(@user)%>
-<br>
 <!-- <h3>Edit Your Account</h3> <p>(link to users/views/edit.html.erb)</p> -->
 <%= link_to "Delete You Account", @user, method: :delete %>
 
-<%= link_to "Create a Post", new_post_path(@post)%>
+
 <!-- <h3>Create a Post </h3>(link to posts/views/new.html.erb)(the posts/views/new.html.erb has a link to see the single post on posts/views/show.html.erb) -->
-<h3>See your Feed</h3>(link to posts/views/index.html.erb)

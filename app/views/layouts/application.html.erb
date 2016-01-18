@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TeamSpiritApp</title>
+  <title>MicroBlog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <link rel="stylesheet" type="text/.scss" href="welcome.scss">
+  <link rel="stylesheet" type="text/css" href="application.css">
 </head>
-<body>
+	<div id="nav-bar">
+	<!-- 	<ul>
+			<li>About Microglobs</li>
+			<li>Log Out</li>
+			</ul> -->
+	</div>
+	<body>
 
 <%= yield %>
 
-</body>
+	</body>
 </html>
